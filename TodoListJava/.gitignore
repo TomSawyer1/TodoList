@@ -1,0 +1,19 @@
+# Compiled class files
+target/
+
+# IDE
+.idea/
+*.iml
+
+# Maven wrapper jar
+.mvn/wrapper/maven-wrapper.jar
+
+# Database
+*.db
+
+# Logs
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db

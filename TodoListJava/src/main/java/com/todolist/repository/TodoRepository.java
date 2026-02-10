@@ -1,0 +1,24 @@
+package com.todolist.repository;
+
+import com.todolist.model.Todo;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+import java.util.List;
+
+/**
+ * Repository pour accéder aux données des tâches.
+ */
+@Repository
+public interface TodoRepository extends JpaRepository<Todo, Long> {
+
+    /**
+     * Trouve toutes les tâches par état de complétion.
+     */
+    List<Todo> findByCompleted(Boolean completed);
+
+    /**
+     * Trouve toutes les tâches dont le titre contient une chaîne donnée.
+     */
+    List<Todo> findByTitleContainingIgnoreCase(String title);
+}
